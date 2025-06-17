@@ -1,0 +1,49 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@layer components {
+  .section-title {
+    @apply text-3xl font-bold mb-6 text-gray-800;
+  }
+
+  .container-box {
+    @apply container mx-auto px-4 py-10;
+  }
+
+  .project-card {
+    @apply p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition;
+  }
+
+  .form-input {
+    @apply w-full border border-gray-300 p-2 rounded;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition;
+  }
+
+  .btn-success {
+    @apply bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition;
+  }
+
+  .navbar-link {
+    @apply hover:text-blue-500 transition;
+  }
+}
+@layer utilities {
+  .bg-pattern {
+    background-image: url('/images/pattern.svg');
+    background-repeat: repeat;
+    background-size: cover;
+  }
+}
+
